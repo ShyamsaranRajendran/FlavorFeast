@@ -5,6 +5,8 @@ import './App.css';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Login from './components/login/login';
+import Forgot from './components/login/forgot-password';
+import Reset from './components/login/reset-password';
 import Register from './components/register/register';
 import Feedback from './components/feedback/feedback';
 import AdminUser from './components/adminUser/user';
@@ -21,6 +23,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Content />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/forgot-passwd" element={<Forgot />} />
+          <Route path="/reset-passwd" element={<Reset />} />
           <Route path="/register" element={<Register />} />
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/admin/user" element={<AdminUser />} />
