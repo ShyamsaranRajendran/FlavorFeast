@@ -1,0 +1,40 @@
+/* src/components/header/header.css */
+
+header {
+  background-color: #333;
+  padding: 1rem 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+a.active {
+  background-color: #007bff;
+  border-radius: 4px;
+}
