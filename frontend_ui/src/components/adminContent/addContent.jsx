@@ -81,7 +81,7 @@ function AddContent() {
     <div className="add-content-container">
       <h2>Add Product</h2>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
+        <div className="form-group form-for-title">
           <label htmlFor="title">Title:</label>
           <input
             type="text"
