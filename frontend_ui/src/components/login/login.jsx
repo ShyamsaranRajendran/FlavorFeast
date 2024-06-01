@@ -15,8 +15,6 @@ function Login() {
         email,
         password,
       });
-      console.log(response.data); // Log the response data to see its structure
-
       if (response.data.token) {
         setMessage("Login successful!");
         window.location.href = "/";
@@ -30,38 +28,44 @@ function Login() {
 
   return (
     <div className="login-container">
-      <h2 className="title">Login</h2>
+      <h2 className="login-title">Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email" className="login-label">
+            Email:
+          </label>
           <input
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            className="login-input"
           />
         </div>
         <div className="form-group">
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password" className="login-label">
+            Password:
+          </label>
           <input
             type="password"
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            className="login-input"
           />
         </div>
         <div className="forgot">
-          <Link exact to="/forgot-passwd" activeClassName="active">
+          <Link exact to="/forgot-passwd" className="forgot-link">
             Forgot password?
           </Link>
         </div>
-        <button type="submit" className="submit-btn">
+        <button type="submit" className="login-submit-btn">
           Login
         </button>
       </form>
-      {message && <p className="message">{message}</p>}
+      {message && <p className="login-message">{message}</p>}
     </div>
   );
 }

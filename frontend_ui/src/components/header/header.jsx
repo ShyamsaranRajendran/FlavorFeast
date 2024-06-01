@@ -13,11 +13,21 @@ function Header() {
           <li>
             <NavLink
               exact
+              to="/"
+              className="nav-link"
+              activeClassName="active"
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              exact
               to="/Products"
               className="nav-link"
               activeClassName="active"
             >
-              Product
+              Popular
             </NavLink>
           </li>
           <li>
@@ -26,12 +36,12 @@ function Header() {
               className="nav-link"
               activeClassName="active"
             >
-              Pricing
+              Meat & Seafood
             </NavLink>
           </li>
           <li>
             <NavLink to="/About" className="nav-link" activeClassName="active">
-              About
+              Health & Diet
             </NavLink>
           </li>
           <li>
@@ -49,12 +59,12 @@ function Header() {
         <div className="login">
           {" "}
           <NavLink to="/login" className="nav-link" activeClassName="active">
-            login
+            Login
           </NavLink>
         </div>
         <div className="register">
           <NavLink to="/register" className="nav-link" activeClassName="active">
-            register
+            Register
           </NavLink>
         </div>
         <FaSearch />

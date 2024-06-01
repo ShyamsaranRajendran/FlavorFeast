@@ -33,41 +33,52 @@ function Register() {
 
   return (
     <div className="register-container">
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
+      <h2 className="register-title">Register</h2>
+      <form onSubmit={handleSubmit} className="register-form">
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email" className="register-label">
+            Email:
+          </label>
           <input
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            className="register-input"
           />
         </div>
         <div className="form-group">
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password" className="register-label">
+            Password:
+          </label>
           <input
             type="password"
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            className="register-input"
           />
         </div>
         <div className="form-group">
-          <label htmlFor="confirm_password">Confirm Password:</label>
+          <label htmlFor="confirm_password" className="register-label">
+            Confirm Password:
+          </label>
           <input
             type="password"
             id="confirm_password"
             value={confirm_password}
             onChange={(e) => setConfirm_password(e.target.value)}
             required
+            className="register-input"
           />
         </div>
-        <button type="submit">Register</button>
+        <button type="submit" className="register-submit-btn">
+          Register
+        </button>
       </form>
-      {message && <p>{message}</p>}
+      {message && <p className="register-message">{message}</p>}
     </div>
   );
 }

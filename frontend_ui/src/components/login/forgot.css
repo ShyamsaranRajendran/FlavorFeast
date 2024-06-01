@@ -1,4 +1,5 @@
-.login-container {
+/* forgot.css */
+.forgot-container {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -7,41 +8,32 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-title {
+.forgot-title {
   text-align: center;
   color: #333;
 }
 
-.form-group {
-  margin-bottom: 20px;
+.forgot-form {
+  margin-top: 20px;
 }
 
-.login-label {
+.forgot-form label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
-.login-input {
+.forgot-form input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.forgot {
-  text-align: right;
-  margin-bottom: 10px;
-}
-
-.forgot-link {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.login-submit-btn {
+.forgot-form button {
   width: 100%;
   padding: 10px;
+  margin-top: 10px;
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -50,11 +42,11 @@
   transition: background-color 0.3s ease;
 }
 
-.login-submit-btn:hover {
+.forgot-form button:hover {
   background-color: #0056b3;
 }
 
-.login-message {
+.forgot-message {
   margin-top: 20px;
   text-align: center;
   color: #dc3545;

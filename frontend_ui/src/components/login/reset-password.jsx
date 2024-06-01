@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import "./reset.css";
 function ResetPassword() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [otp, setOTP] = useState(""); // Define OTP state
+  const [otp, setOTP] = useState(""); 
   const [message, setMessage] = useState("");
 
   const token = new URLSearchParams(window.location.search).get("token");
@@ -27,39 +27,44 @@ function ResetPassword() {
   };
 
   return (
-    <div>
-      <h2>Reset Password</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="reset-container">
+      <h2 className="reset-title">Reset Password</h2>
+      <form onSubmit={handleSubmit} className="reset-form">
         <div>
-          <label>New Password:</label>
+          <label className="reset-label">New Password:</label>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            className="reset-input"
           />
         </div>
         <div>
-          <label>Confirm Password:</label>
+          <label className="reset-label">Confirm Password:</label>
           <input
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
+            className="reset-input"
           />
         </div>
         <div>
-          <label>Enter OTP:</label>
+          <label className="reset-label">Enter OTP:</label>
           <input
             type="text"
             value={otp}
             onChange={(e) => setOTP(e.target.value)}
             required
+            className="reset-input"
           />
         </div>
-        <button type="submit">Reset Password</button>
+        <button type="submit" className="reset-submit-btn">
+          Reset Password
+        </button>
       </form>
-      {message && <p>{message}</p>}
+      {message && <p className="reset-message">{message}</p>}
     </div>
   );
 }

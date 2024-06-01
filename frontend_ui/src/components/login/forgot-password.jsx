@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import "./forgot.css";
 function ForgotPassword() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -16,7 +16,6 @@ function ForgotPassword() {
       );
       if (response.data.token) {
         setMessage("An OTP has been sent to your email address.");
-        // Redirect to ResetPassword with token in URL
         window.location.href = `/reset-password?token=${response.data.token}`;
       } else {
         setMessage("Failed to initiate password reset: " + response.data.error);
@@ -27,21 +26,26 @@ function ForgotPassword() {
   };
 
   return (
-    <div>
-      <h2>Forgot Password</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="forgot-container">
+      <h2 className="forgot-title">Forgot Password</h2>
+      <form onSubmit={handleSubmit} className="forgot-form">
         <div>
-          <label>Email:</label>
+          <label htmlFor="email" className="forgot-label">
+            Email:
+          </label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            className="forgot-input"
           />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className="forgot-submit-btn">
+          Submit
+        </button>
       </form>
-      {message && <p>{message}</p>}
+      {message && <p className="forgot-message">{message}</p>}
     </div>
   );
 }
