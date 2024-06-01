@@ -13,7 +13,7 @@ import AdminUser from './components/adminUser/user';
 import Content from './components/content/content';
 import AdminContent from './components/adminContent/addContent';
 import AdminView from './components/adminContent/viewContent';
-
+import Land from './components/landingPage/land';
 
 function App() {
   return (
@@ -21,7 +21,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Content />} />
+          <Route path="/" element={<Land />} />
+          <Route path="/products" element={<Content />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-passwd" element={<Forgot />} />
           <Route path="/reset-passwd" element={<Reset />} />

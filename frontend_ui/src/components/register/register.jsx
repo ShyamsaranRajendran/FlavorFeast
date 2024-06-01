@@ -10,7 +10,7 @@ function Register() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (password != confirm_password) {
+    if (password !== confirm_password) {
       setMessage("Passwords do not match!");
       return;
     }

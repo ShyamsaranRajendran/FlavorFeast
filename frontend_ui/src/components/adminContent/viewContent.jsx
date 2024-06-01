@@ -33,7 +33,7 @@ function ViewContent() {
 
   return (
     <div className="content-container">
-      <h2>Products</h2>
+      <h2>Recipe</h2>
       {error ? (
         <p>Error: {error}</p>
       ) : (

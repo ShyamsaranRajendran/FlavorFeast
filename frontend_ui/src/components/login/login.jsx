@@ -1,4 +1,3 @@
-// login.jsx
 import React, { useState } from "react";
 import axios from "axios";
 import "./login.css";
@@ -31,7 +30,7 @@ function Login() {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
+      <h2 className="title">Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
@@ -58,9 +57,11 @@ function Login() {
             Forgot password?
           </Link>
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" className="submit-btn">
+          Login
+        </button>
       </form>
-      {message && <p>{message}</p>}
+      {message && <p className="message">{message}</p>}
     </div>
   );
 }
